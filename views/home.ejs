@@ -1,0 +1,15 @@
+<%- include('partials/header') -%>
+
+<h1>Home</h1>
+
+<p><%= homeContent %></p>
+
+<%  userPostArray.forEach(function(record) {  %>
+  <h1><%= record.title %></h1>
+  <p><%= record.post.substring(0, 100) + "..." %>  <a href="/posts/<%= record._id %>">Read more</a></p>
+<%  }); %>
+
+
+
+
+<%- include('partials/footer') -%>
